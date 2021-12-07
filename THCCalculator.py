@@ -1,4 +1,3 @@
-
 from tkinter import *
 
 root = Tk()
@@ -10,16 +9,16 @@ root = Tk()
 ## Function Declarations
 ##########################################################
 def thcResult():
-	batchEntry = int(batch.get())
+	batchEntry = (batch.get())
 	thcaEntry  = float(thca.get())
 	thcEntry   = float(thc.get())
-	
+
 	Total_THCa = thcaEntry *.877
 	Total_THC =  thcEntry + float (Total_THCa)
-	
-	dispRes.insert(0,f'Batch: {batchEntry} yields a Total THC of {Total_THC}') 
 
-########################################################	
+	dispRes.insert(0,f'Batch {batchEntry} yields a Total THCa of {Total_THCa} and a Total THC of {Total_THC}')
+
+########################################################
 
 # setting the windows size and name
 root.geometry("400x300")
@@ -74,7 +73,7 @@ subBtn.pack(pady=10)
 dispRes = Entry(
 	root,
 	width=38,
-	font=('Arial',14)
+	font=('Arial',11)
 )
 dispRes.pack(pady=5)
 

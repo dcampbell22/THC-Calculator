@@ -16,7 +16,7 @@ def thcResult():
 	Total_THCa = thcaEntry *.877
 	Total_THC =  thcEntry + float (Total_THCa)
 
-	dispRes.insert(0,f'Batch {batchEntry} yields a Total THCa of {Total_THCa} and a Total THC of {Total_THC}')
+	dispRes.insert(0,f'Batch: {batchEntry} Total THCa: {Total_THCa} Total THC {Total_THC}')
 
 ########################################################
 
@@ -64,7 +64,7 @@ thc.pack()
 # Button that will call the submit function
 subBtn = Button(
 	root,
-	text='Calculate Total THC',
+	text='Calculate',
 	relief = SOLID,
 	command = thcResult
 )
@@ -72,7 +72,7 @@ subBtn.pack(pady=10)
 
 dispRes = Entry(
 	root,
-	width=38,
+	width=100,
 	font=('Arial',11)
 )
 dispRes.pack(pady=5)
